@@ -1,0 +1,82 @@
+.lasticon-btn {
+  padding: 8px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.lasticon-btn:hover {
+  background: #f3f4f6;
+}
+
+/* wrapper */
+.dots-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+/* common dot */
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #111;
+  border-radius: 50%;
+}
+
+/* DEFAULT positions (picture-like) */
+.dot-center { top: 13px; left: 13px; }
+
+.dot-top    { top: 2px;  left: 13px; }
+.dot-right  { top: 13px; left: 24px; }
+.dot-bottom { top: 24px; left: 13px; }
+.dot-left   { top: 13px; left: 2px; }
+
+/* ▶️ HOVER: pull to center then RETURN */
+.lasticon-btn:hover .dot-top {
+  animation: pullTop 0.6s ease-in-out;
+}
+
+.lasticon-btn:hover .dot-right {
+  animation: pullRight 0.6s ease-in-out;
+}
+
+.lasticon-btn:hover .dot-bottom {
+  animation: pullBottom 0.6s ease-in-out;
+}
+
+.lasticon-btn:hover .dot-left {
+  animation: pullLeft 0.6s ease-in-out;
+}
+
+/* center dot stays fixed */
+.lasticon-btn:hover .dot-center {
+  animation: none;
+}
+
+/* 🔑 KEYFRAMES (pull → return) */
+@keyframes pullTop {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); } /* come near center */
+  100% { transform: translateY(0); }    /* return back */
+}
+
+@keyframes pullRight {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes pullBottom {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pullLeft {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}

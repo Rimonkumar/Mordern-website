@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.custom-cursor {
+  transition: 
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.08s linear;
+}
+
+.custom-cursor .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+/* 🔥 Reactive hover state */
+.cursor-active {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: black;
+}
