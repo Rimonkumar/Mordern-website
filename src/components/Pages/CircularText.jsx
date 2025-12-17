@@ -23,7 +23,6 @@ const CircularText = ({ text = '', spinDuration = 20, onHover = 'speedUp', class
 
   return (
     <div className={`relative flex items-center justify-center ${className}`} style={{ width: '100%', height: '100%' }}>
-      {/* মাঝখানের স্থির কন্টেন্ট (যেমন আপনার 'f' অক্ষর) */}
       <div className="absolute z-10 flex items-center justify-center">
         {children}
       </div>

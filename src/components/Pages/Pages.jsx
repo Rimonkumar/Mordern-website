@@ -1,7 +1,9 @@
 import React from "react";
 import profileImg from "../../Photo/home1-author-img1.jpg";
 import CircularText from "./CircularText";
-import Marquee from "./Marquee";
+import MarqueeText from "./Marquee";
+import Portfolio from "./Protfulio";
+import Companyexpertise from "./Companyexpertise";
 
 const Pages = () => {
   return (
@@ -121,10 +123,14 @@ const Pages = () => {
         </div>
 
       </div>
-       <div>
-        {/* <Marquee></Marquee> */}
-       </div>
+                <div>
+                  <MarqueeText></MarqueeText>
+                </div>
+                <Portfolio></Portfolio>
+                <Companyexpertise></Companyexpertise>
+    
     </section>
+
   );
 };
 
